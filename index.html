@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PodcastApp</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="logo">
+        <span>
+          <strong>PodcastApp</strong>
+          <i class="fa-solid fa-microphone"></i>
+        </span>
+      </div>
+      <div class="user-icon">
+        <i class="fa-solid fa-user"></i>
+      </div>
+    </header>
+
+    <section class="filters">
+      <label for="genre">Filter by:</label>
+      <div class="filter-row">
+        <select id="genre">
+          <option value="all">All Genres</option>
+        </select>
+        <select id="sort">
+          <option value="recent">Recently Updated</option>
+        </select>
+      </div>
+    </section>
+
+    <div id="podcastModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div class="modal-cover" id="modalCover"></div>
+
+        <div class="modal-info">
+          <h3>Description</h3>
+          <p id="modalDescription"></p>
+
+          <h3>Genre</h3>
+          <div id="modalGenres" class="tags"></div>
+
+          <p class="updated" id="modalUpdated"></p>
+        </div>
+
+        <h3 id="modalSectionTitle">Seasons</h3>
+        <div id="modalSeasons" class="season-list"></div>
+      </div>
+    </div>
+
+    <section id="podcastGrid" class="grid"></section>
+
+    <script type="module" src="functions.js"></script>
+  </body>
+</html>
