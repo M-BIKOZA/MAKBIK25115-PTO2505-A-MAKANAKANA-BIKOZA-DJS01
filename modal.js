@@ -99,7 +99,7 @@ export class Modal {
     if (imageUrl) {
       const img = document.createElement('img');
       img.src = imageUrl;
-      img.alt = ${title} Cover;
+      img.alt = '${title} Cover';
       img.style.width = '100%';
       img.style.height = '100%';
       img.style.objectFit = 'cover';
@@ -134,7 +134,7 @@ export class Modal {
     genreIds.forEach(id => {
       const tag = document.createElement('span');
       tag.className = 'tag';
-      tag.textContent = this.genreMap[String(id)] || this.genreMap[Number(id)] || Genre ${id};
+      tag.textContent = this.genreMap[String(id)] || this.genreMap[Number(id)] || 'Genre ${id}';
       this.modalGenres.appendChild(tag);
     });
   }
@@ -143,7 +143,7 @@ export class Modal {
   _setSeasons(seasons) {
     this.modalSeasons.innerHTML = '';
     if (seasons) {
-      this.modalSeasons.textContent = Seasons: ${seasons};
+      this.modalSeasons.textContent = 'Seasons: ${seasons}';
     }
   }
 
