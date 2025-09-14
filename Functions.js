@@ -21,7 +21,7 @@ function formatDate(isoString) {
 
   if (diff === 0) return 'Updated today';
   if (diff === 1) return 'Updated yesterday';
-  if (diff <= 30) return Updated ${diff} days ago;
+  if (diff <= 30) return 'Updated ${diff} days ago';
 
   return `Updated on ${date.toLocaleDateString('en-US', {
     year: 'numeric',
@@ -33,7 +33,7 @@ function formatDate(isoString) {
 // Build tags for genres
 function createTags(genreIds = []) {
   return genreIds.map(id => {
-    const name = genreMap[id] || Genre ${id};
+    const name = genreMap[id] || 'Genre ${id}';
     return <span class="tag">${name}</span>;
   }).join('');
 }
